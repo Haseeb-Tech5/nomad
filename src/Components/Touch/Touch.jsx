@@ -118,18 +118,18 @@ const Touch = () => {
                   </div>
 
                   <div className="flex-item">
-                    <label htmlFor="role">Your Role</label>
-                    <div className="good">
-                      <select id="role" name="role" defaultValue="">
-                        <option value="" disabled hidden>
-                          Choose your role
-                        </option>
-                        <option value="role1">Role 1</option>
-                        <option value="role2">Role 2</option>
-                        <option value="role3">Role 3</option>
-                      </select>
-                    </div>
-                  </div>
+  <label htmlFor="role">Your Role</label>
+  <div className="custom-select">
+    <select id="role" name="role" defaultValue="">
+      <option value="" disabled hidden>
+        Choose your role
+      </option>
+      <option value="role1">Nursing</option>
+      <option value="role2">Practice</option>
+     
+    </select>
+  </div>
+</div>
                 </div>
                 <label htmlFor="email">Email</label>
                 <input
@@ -159,9 +159,7 @@ const Touch = () => {
             </div>
           </div>
         </div>
-        <div className="form-img-container">
-          <img src={Line} alt="" />
-        </div>
+       
         <div className="whole-container-sb">
           <div className="whole-container-left">
             <div className="whole-items">Cookie Policy</div>

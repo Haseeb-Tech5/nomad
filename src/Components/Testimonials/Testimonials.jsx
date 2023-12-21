@@ -115,10 +115,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="key-container">
-          <img src={Line} alt="" />
-        </div>
-      </div>
+           </div>
     </div>
   );
 };

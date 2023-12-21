@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../Assetss/logo.png";
 // import logo1 from "../../Assests/Monochrome on Transparent 4.png";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navbarStyle = {
@@ -54,13 +55,15 @@ const Navbar = () => {
           >
             <ul className="navbar-nav mb-2 mb-lg-0 text-center mx-auto">
               <li className="nav-item">
-                <a
+               <Link to="/about" style={{textDecoration:"none"}}>
+               <a
                   className="nav-link"
                   href="javascript:void(0)"
                   style={{ fontWeight: "500", color: "#222222" }}
                 >
                   About us
                 </a>
+               </Link>
               </li>
               <li className="nav-item">
                 <a

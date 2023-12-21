@@ -1,10 +1,19 @@
 import "./App.css";
 import Pages from "./Components/Pages/Pages";
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import About from "./Components/about/about";
+
 
 function App() {
   return (
     <div>
-      <Pages />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Pages/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
+      </BrowserRouter>
+     
     </div>
   );
 }
