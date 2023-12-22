@@ -10,6 +10,7 @@
 video {
   /* height: 100%; */
   width: 100%;
+  opacity: 60%;
 }
 .video-heading-container {
   position: absolute;
@@ -43,6 +44,45 @@ video {
   line-height: 60px;
   color: black;
   width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  .video-container h2{
+    font-size: 35px !important;
+  }
+  .video-container button{
+    width: 250px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .video-heading-container {
+    align-items: center;
+  }
+  .video-heading-container h2{
+    width: 70% !important;
+    text-align: center;
+    font-size: 30px !important;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 685px) {
+  .video-heading-container h2{
+    font-size: 25px !important;
+  }
+  .video-container button{
+    width: 200px;
+   
+  }
+}
+@media screen and (max-width: 580px) {
+  .video-heading-container h2{
+    width: 100% !important;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .video-container button{
+    width: 90%;
+    height: 66px;
+  }
 }
 @media only screen and (min-width: 1645px) {
   .video-heading-container h2 {

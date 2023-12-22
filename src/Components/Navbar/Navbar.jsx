@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const navbarStyle = {
     fontFamily: "'Poppins', sans-serif",
-    padding: 0,
+    
     // maxWidth: "1440px",
     width: "100%",
   };

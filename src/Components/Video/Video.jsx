@@ -4,7 +4,7 @@ import Video1 from "../Video/video.mp4";
 
 const Video = () => {
   return (
-    <div className="video-container">
+    <div className="video-container2">
       <video src={Video1} autoPlay loop muted className="video" />
       <div className="video-heading-container">
         <h2>Connecting Nurses to Practices, Bridging Excellence Together</h2>

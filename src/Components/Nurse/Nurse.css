@@ -2,15 +2,15 @@
   max-width: 1440px;
   align-items: center;
   display: flex;
+  width: 100%;
+  height: auto;
 }
 .nurse-container {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   background-image: url("../../Assetss/Capawad\ 2.png");
   background-size: cover;
   background-position-x: 0px;
-  background-position-y: 20%;
   height: 647px;
   width: 100%;
   background-color: #f5f3ef;
@@ -25,6 +25,7 @@
   justify-content: center;
   flex-direction: column;
   padding-left: 5%;
+  z-index: 1000;
 }
 .nurse-logo {
   /* background-color: green; */
@@ -40,25 +41,27 @@
   height: 100%;
 }
 .nurse-heading {
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+
   /* background-color: purple; */
   width: 90%;
 }
 .nurse-heading h2 {
   font-size: 40px;
   line-height: 50px;
-}
-.nurse-para {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  width: 81%;
+}
+.nurse-para {
+ 
+  width: 80%;
   /* background-color: orange; */
 }
 .nurse-para p {
   font-size: 20px;
-  color: #222222;
+  color: rgba(34, 34, 34, 1);
   line-height: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 .nurse-button {
   /* background-color: blue; */
@@ -90,7 +93,7 @@
   background-image: url("../../Assetss//Rectangle.png");
   background-size: contain;
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -106,13 +109,73 @@
   width: 250px;
   text-align: center;
 }
-@media screen and (min-width: 1440px) {
-  .nurse-container {
-    background-position-x: 0px;
-    background-position-y: 70%;
+@media screen and (max-width: 1290px) {
+  .nurse-para p{
+    font-size: 18px !important;
+  }
+  .nurse-container{
+    background-position-y: 60px;
+  }
+  .nurse-button button{
+    width: 250;
+    height: 55px;
+  }
+  .nurse-heading h2{
+    font-size: 34px;
+  }
+  .nurse-heading{
+    width: 100%;
+  }
+
+
+}
+@media screen and (max-width: 1200px) {
+  .nurse-para{
+    width: 100%;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 999px) {
+  .nurse-full-contained{
+    flex-direction: column;
+    height: auto;
+  }
+  .nurse-container{
+    height: auto;
+  }
+  .nurse-left{
+    width: 90%;
+    align-items: center;
+    padding-left: 0px;
+    margin-bottom: 30px;
+  }
+  .nurse-heading{
+   text-align: center;
+  }
+  .nurse-para p{
+    text-align: center;
+  }
+  .nurse-button{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .nurse-right{
+    width: 100%;
+    height: 600px !important;
+    background-size: fill;
+    margin-bottom: 30px;
+  }
+  
+}
+@media screen and (max-width: 540px) {
+  .nurse-button button{
+    width: 100%;
+  }
+  .nurse-button{
+    width: 80%;
+  }
+}
+/* @media screen and (max-width: 1300px) {
   .nurse-para {
     width: 95%;
   }
@@ -193,7 +256,7 @@
   .nurse-container {
     height: 590px;
   }
-}
+} */
 .fadeInFromRight {
   animation: fadeInFromRight 400ms ease-out;
   animation-fill-mode: forwards;

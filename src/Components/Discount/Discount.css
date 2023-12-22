@@ -103,3 +103,102 @@
     font-size: 32px;
   }
 } */
+.nurse-para2 p {
+  font-size: 20px;
+  color: rgba(34, 34, 34, 1);
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.nurse-para2{
+  width: 80%;
+}
+@media screen and (max-width: 1290px) {
+  .nurse-para2 p{
+    font-size: 18px !important;
+  }
+  .nurse-para2{
+    width: 90%;
+  }
+ 
+
+
+}
+@media screen and (max-width: 1200px) {
+  .nurse-para{
+    width: 100%;
+    height: auto;
+  }
+  .left-discount{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .discount-container-full{
+    flex-direction: column-reverse;
+   height: auto;
+  margin-bottom: 30%;
+  padding-top: 20px;
+  }
+  .back-video{
+    height: 100%;
+    object-fit: cover;
+  }
+ .left-discount{
+padding-top: 160px;
+ }
+ .discount-container{
+  height: auto;
+ }
+  .nurse-left{
+    width: 90%;
+    align-items: center;
+    padding-left: 0px;
+    margin-bottom: 30px;
+  }
+  .nurse-heading{
+   text-align: center;
+  }
+  .nurse-para2 p{
+    text-align: center;
+  }
+  .nurse-button{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+}
+@media screen and (max-width: 740px) {
+  .left-discount{
+    padding-top: 110px;
+  }
+
+}
+@media screen and (max-width: 660px) {
+  .left-discount{
+    font-size: 26px;
+   padding-top: 0px;
+   text-align: center;
+  }
+  .nurse-para2{
+    width: 100%;
+    
+  }
+  .nurse-left{
+    width: 87%;
+  }
+  .nurse-para2 p{
+    font-size: 15px !important;
+  }
+  .back-video{
+    height: 700px;
+  }
+  .discount-container-full{
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+
+}

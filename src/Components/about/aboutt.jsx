@@ -10,7 +10,7 @@ export default function About(){
     return(
         <>
         <Navbar/>
-        <div className="video-container">
+        <div className="video-container2">
       <video src={video2} autoPlay loop muted className="video" />
       <div className="video-heading-container2">
       <div className="about-head">
@@ -22,13 +22,10 @@ export default function About(){
         </p>
        </div>
       </div>
-      </div>
-      <div className="video-button"></div>
-    </div>
-    <div className="story-container">
+      <div className="story-container">
       <div className="width-container">
         <div className="about-heading">
-          <h2>Our Story</h2>
+          <h2>About us</h2>
         </div>
         <div className="about-img">
           <img src={Vector} alt="" />
@@ -40,7 +37,7 @@ export default function About(){
         </div>
         <div className="about-para2">
           <p>
-          Through the creation of our ground-breaking app and website, we successfully filled this void, facilitating communication between locum nurses and dental practices to minimise the disruption faced by dentists and patients. 
+          Through the creation of our ground-breaking app and website, we successfully filled this void, facilitating communication between locum nurses and dental practices to minimise the disruption faced by dentists and patients.
           </p>
         </div>
         <div className="about-para2">
@@ -50,6 +47,11 @@ export default function About(){
         </div>
       </div>
     </div>
+      </div>
+      
+      <div className="video-button"></div>
+    </div>
+   
    <div className="flex" style={{overflow:"hidden"}}>
    <Testimonials/>
      <Touch/>
@@ -57,4 +59,4 @@ export default function About(){
    
         </>
     )
-}
+    }

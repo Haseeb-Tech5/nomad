@@ -43,32 +43,26 @@ const Discount = () => {
           <div className="left-discount">
             <p className={data.animation}>{data.text}</p>
           </div>
-          <div className="right-discount">
-            <div className="discount-img">
-              <img src={Tooth} alt="" />
-            </div>
-            <div className="discount-heading">
-              <h2>
-                Why <span style={{ color: "#497367" }}> Practices</span> should
-                join us!
-              </h2>
-            </div>
-            <div className="discount-para">
-              <p>
-                At Nomad Nurse, we invite dental practices to elevate their
-                staffing experience by joining our dynamic platform. We
-                understand the pivotal role that a skilled dental nurse plays in
-                ensuring the smooth functioning of a practice. Our user-friendly
-                interface streamlines the recruitment process, allowing you to
-                find the perfect match quickly and efficiently. Join us in
-                transforming the way you staff your practice and experience the
-                convenience of finding the right dental nurse with ease
-              </p>
-            </div>
-            <div className="discount-button">
-              <button>Sign Up Now</button>
-            </div>
+          <div className="nurse-left">
+          <div className="nurse-logo">
+            <img src={Tooth} alt="" />
           </div>
+          <div className="nurse-heading">
+            <h2>
+              Why <span style={{ color: "#497367" }}>Nurses</span> should join
+              us!
+            </h2>
+          </div>
+          <div className="nurse-para2">
+            <p>
+            At Nomad Nurse, we invite dental practices to elevate their staffing experience by joining our dynamic platform. We understand the pivotal role that a skilled dental nurse plays in ensuring the smooth functioning of a practice. Our user-friendly interface streamlines the recruitment process, allowing you to find the perfect match quickly and efficiently. Join us in transforming the way you staff your practice and experience the convenience of finding the right dental nurse with ease
+            </p>
+          </div>
+
+          <div className="nurse-button">
+            <button>Join now</button>
+          </div>
+        </div>
         </div>
       </div>
     </div>

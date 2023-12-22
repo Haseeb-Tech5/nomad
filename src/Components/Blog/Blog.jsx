@@ -35,6 +35,9 @@ const Blog = () => {
               <div className="card-blog1">
                 <div className="blog-card-img">
                   <img src="doctor.png" alt="" />
+                  <div className="card-logo2">
+      <p style={{color:"rgba(73, 115, 103, 1)"}}>Health</p>
+    </div>
                 </div>
                 <div className="blog-card-head">
                   <p>Knowing where to go makes it a bit easier</p>
@@ -66,7 +69,7 @@ const Blog = () => {
                   </div>
                   <div className="card-flex">
                     <div className="card-logo">
-                      <p>Health</p>
+                      <p style={{color:"rgba(73, 115, 103, 1)"}}>Health</p>
                     </div>
                     <div className="blog-card-head2">
                       <p>Real impact of nurses on dentists</p>
@@ -88,7 +91,7 @@ const Blog = () => {
                   </div>
                   <div className="card-flex">
                     <div className="card-logo">
-                      <p>Nursing</p>
+                      <p style={{color:"rgba(185, 28, 28, 1)"}}>Nursing</p>
                     </div>
                     <div className="blog-card-head2">
                       <p>The nursing crunch is getting real</p>
