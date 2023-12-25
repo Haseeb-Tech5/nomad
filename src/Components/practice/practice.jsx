@@ -2,17 +2,22 @@ import Navbar from "../Navbar/Navbar";
 import Register from "../Register/Register";
 import Testimonials from "../Testimonials/Testimonials";
 import Touch from "../Touch/Touch";
-import videoo from "../about/about.mp4";
 import "../nurses/nurses.css"
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { BounceLoader } from "react-spinners";
 
 export default function Practice(){
-    const [isDropdownVisible, setDropdownVisible] = useState(false);
+    const [isLoading, setLoading] = useState(true);
 
-    const toggleDropdown = () => {
-      setDropdownVisible(!isDropdownVisible);
-    };
-    
+    useEffect(() => {
+      const delay = 3000;
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, delay);
+  
+      return () => clearTimeout(timer);
+    }, []);
+  
     const icons = [
         {img:"icon1.svg",title:"Cost-Effective",text:"Save time, cut paperwork, and enjoy competitive rates with our platform"},
         {img:"practice1.svg",title:"Efficiency",text:"Elevate your practice with us!"},
@@ -24,9 +29,16 @@ export default function Practice(){
     ]
     return(
         <>
+      {isLoading ? (
+        <div className="loading-overlay">
+          <BounceLoader color="rgba(174, 156, 127, 1)" loading={isLoading} size={100} />
+        
+        </div>
+      ) : (
+        <>
         <Navbar/>
         <div className="nurses-video">
-            <video src={videoo}></video>
+            <img src="practice.png" alt="" />
             <div className="nurses-video-cont">
            <div className="nurse-video-head">
           <div className="nurses-flex">
@@ -46,27 +58,7 @@ export default function Practice(){
            </div>
           </div>
            </div>
-           <div className="nurse-video-tail">
-            <div className="video-stock">
-            <div className="stock">
-      <div className="arrow-icon" onClick={toggleDropdown}>
-       <img src="drop.png" alt="" />
-      </div>
-      <div className="stock-p">
-        <p>iStock</p>
-        <p>credit: PeopleImages</p>
-      </div>
-      {isDropdownVisible && (
-        <div className="dropdown-content">
          
-          <p>Stock 1</p>
-          <p>Stock 2</p>
-        
-        </div>
-      )}
-    </div>
-            </div>
-           </div>
         </div>
         </div>
         <div className="nurses-icons-main">
@@ -97,7 +89,8 @@ export default function Practice(){
             <Touch/>
 
        
-       
-        </>
-    )
+            </>
+      )}
+    </>
+  );
 }
