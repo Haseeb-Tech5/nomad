@@ -66,22 +66,26 @@ const Navbar = () => {
                </Link>
               </li>
               <li className="nav-item">
-                <a
+               <Link to="/nurse" style={{textDecoration:"none"}}>
+               <a
                   className="nav-link"
                   href="javascript:void(0)"
                   style={{ fontWeight: "500", color: "#222222" }}
                 >
                   Nurses
                 </a>
+               </Link>
               </li>
               <li className="nav-item">
-                <a
+               <Link to="/practice" style={{textDecoration:"none"}}>
+               <a
                   className="nav-link"
                   href="javascript:void(0)"
                   style={{ fontWeight: "500", color: "#222222" }}
                 >
                   Practices
                 </a>
+               </Link>
               </li>
               <li className="nav-item">
                 <a

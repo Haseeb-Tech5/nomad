@@ -10,6 +10,7 @@ export default function About(){
     return(
         <>
         <Navbar/>
+        
         <div className="video-container2">
       <video src={video2} autoPlay loop muted className="video" />
       <div className="video-heading-container2">
