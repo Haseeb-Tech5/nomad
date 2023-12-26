@@ -7,6 +7,7 @@ import { useState,useEffect } from "react";
 import { BounceLoader } from "react-spinners";
 
 export default function Practice(){
+  const [hoveredIndex, setHoveredIndex] = useState(null);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -30,12 +31,12 @@ export default function Practice(){
     return(
         <>
       {isLoading ? (
-        <div className="loading-overlay">
-          <BounceLoader color="rgba(174, 156, 127, 1)" loading={isLoading} size={100} />
-        
-        </div>
-      ) : (
-        <>
+  <div className="loading-overlay">
+    <BounceLoader color="rgba(174, 156, 127, 1)" loading={isLoading} size={100} />
+    <img src="tooth.png" alt="Tooth Image" className="centered-image" />
+  </div>
+) : (
+  <>
         <Navbar/>
         <div className="nurses-video">
             <img src="practice.png" alt="" />
@@ -62,28 +63,27 @@ export default function Practice(){
         </div>
         </div>
         <div className="nurses-icons-main">
-            <div className="nurses-icons">
-               
-                    {icons.map((icon,index)=>(
-                        <div key={index} className="icon-box">
-                            <div className="image-box">
-                                <img src={icon.img} alt="" />
-                            </div>
-                            <div className="title-box">
-                                <p>
-                                    {icon.title}
-                                </p>
-                            </div>
-                            <div className="text-box">
-                                <p>
-                                    {icon.text}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-
-                </div>
+      <div className="nurses-icons">
+        {icons.map((icon, index) => (
+          <div
+            key={index}
+            className={`icon-box ${hoveredIndex !== null && hoveredIndex !== index ? 'blur' : ''}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div className="image-box">
+              <img src={icon.img} alt="" />
             </div>
+            <div className="title-box">
+              <p>{icon.title}</p>
+            </div>
+            <div className="text-box">
+              <p>{icon.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
             <Testimonials/>
             <Register/>
             <Touch/>

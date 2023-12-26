@@ -4,6 +4,7 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import About from "./Components/about/aboutt";
 import Nurses from "./Components/nurses/nurses";
 import Practice from "./Components/practice/practice";
+import Privacy from "./Components/privacy";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/nurse" element={<Nurses/>}/>
         <Route path="/practice" element={<Practice/>}/>
+        <Route path="/privacy" element={<Privacy/>}/>
       </Routes>
       </BrowserRouter>
      

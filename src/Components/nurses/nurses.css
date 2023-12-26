@@ -170,14 +170,28 @@ justify-content: end;
     margin-bottom: 40px;
   }
   
-  .nurses-icons:hover .icon-box:not(:hover) {
-    filter: blur(4px); /* Blur effect on non-hovered cards */
-  }
+ .icon-box {
+  /* Styles for non-blurred and non-hovered cards */
+  transition: filter 0.3s ease-in-out;
+}
+
+.icon-box.blur {
+  /* Styles for blurred cards when any card is hovered */
+  filter: blur(5px); /* or any other styling for non-hovered cards */
+}
+
+.icon-box:hover {
+  /* Styles for the hovered card */
+  filter: none; /* or any other styling you want for the focused card */
+}
+
   
+
   .icon-box:hover {
     transform: scale(1.1); /* Zoom effect on hover */
-    filter: blur(0); /* Remove blur on the hovered card */
+    /* Remove blur on the hovered card */
   }
+
   
   .image-box {
     width: 95px;
@@ -194,7 +208,9 @@ justify-content: end;
     width: 60px;
     height: 60px;
   }
-  
+  .text-box{
+    display: none;
+  }
   .title-box p {
     font-size: 21px;
     font-weight: 600;
@@ -204,7 +220,9 @@ justify-content: end;
     text-align: center;
     
   }
-  
+  .icon-box:hover .text-box {
+    display: block; /* Show the text box on hover */
+  }
   .text-box p {
     font-size: 18px;
     font-weight: 400;
@@ -235,3 +253,11 @@ justify-content: end;
         justify-content: space-evenly;
     }
   }
+  .centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+  }
+  

@@ -5,13 +5,14 @@ import Img from "../../Assetss/Group 1000001058.png";
 import Line from "../../Assetss/Line 91.png";
 import Face from "../../Assetss/facebook.png";
 import Insta from "../../Assetss/instagram.png";
-import Link from "../../Assetss/linkedin.png";
+import Link1 from "../../Assetss/linkedin.png";
 import Vector1 from "../../Assetss/Vector (2).png";
 import Img1 from "../../Assetss/group3.png";
 import Img2 from "../../Assetss/group2.png";
 import Img3 from "../../Assetss/Group 4.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 const Touch = () => {
@@ -162,14 +163,18 @@ const Touch = () => {
        
         <div className="whole-container-sb">
           <div className="whole-container-left">
-            <div className="whole-items">Cookie Policy</div>
-            <div className="whole-items">Privacy policy</div>
+           <Link to="" style={{textDecoration:"none"}}>
+           <div className="whole-items">Cookie Policy</div>
+           </Link>
+           <Link to="/privacy" style={{textDecoration:"none"}}>
+           <div className="whole-items">Privacy policy</div>
+           </Link>
             <div className="whole-items">Terms & conditions</div>
           </div>
           <div className="whole-container-right">
             <img src={Face} alt="" />
             <img src={Insta} alt="" />
-            <img src={Link} alt="" />
+            <img src={Link1} alt="" />
           </div>
         </div>
         <div className="title-container1">

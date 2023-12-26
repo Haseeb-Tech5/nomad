@@ -8,6 +8,7 @@ import "../nurses/nurses.css";
 
 export default function Nurses() {
   const [isLoading, setLoading] = useState(true);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     const delay = 3000;
@@ -31,12 +32,12 @@ export default function Nurses() {
 
   return (
     <>
-      {isLoading ? (
-        <div className="loading-overlay">
-          <BounceLoader color="rgba(174, 156, 127, 1)" loading={isLoading} size={100} />
-        
-        </div>
-      ) : (
+    {isLoading ? (
+  <div className="loading-overlay">
+    <BounceLoader color="rgba(174, 156, 127, 1)" loading={isLoading} size={100} />
+    <img src="tooth.png" alt="Tooth Image" className="centered-image" />
+  </div>
+) : (
         <>
           <Navbar />
           <div className="nurses-video">
@@ -66,22 +67,27 @@ export default function Nurses() {
         </div>
           </div>
           <div className="nurses-icons-main">
-            <div className="nurses-icons">
-              {icons.map((icon, index) => (
-                <div key={index} className="icon-box">
-                  <div className="image-box">
-                    <img src={icon.img} alt="" />
-                  </div>
-                  <div className="title-box">
-                    <p>{icon.title}</p>
-                  </div>
-                  <div className="text-box">
-                    <p>{icon.text}</p>
-                  </div>
-                </div>
-              ))}
+      <div className="nurses-icons">
+        {icons.map((icon, index) => (
+          <div
+            key={index}
+            className={`icon-box ${hoveredIndex !== null && hoveredIndex !== index ? 'blur' : ''}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div className="image-box">
+              <img src={icon.img} alt="" />
+            </div>
+            <div className="title-box">
+              <p>{icon.title}</p>
+            </div>
+            <div className="text-box">
+              <p>{icon.text}</p>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
           <Testimonials />
           <Register />
           <Touch />
