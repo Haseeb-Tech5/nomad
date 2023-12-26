@@ -163,13 +163,15 @@ const Touch = () => {
        
         <div className="whole-container-sb">
           <div className="whole-container-left">
-           <Link to="" style={{textDecoration:"none"}}>
+           <Link to="/cookies" style={{textDecoration:"none"}}>
            <div className="whole-items">Cookie Policy</div>
            </Link>
            <Link to="/privacy" style={{textDecoration:"none"}}>
            <div className="whole-items">Privacy policy</div>
            </Link>
+            <Link to="/terms&conditions" style={{textDecoration:"none"}}>
             <div className="whole-items">Terms & conditions</div>
+            </Link>
           </div>
           <div className="whole-container-right">
             <img src={Face} alt="" />

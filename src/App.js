@@ -5,6 +5,8 @@ import About from "./Components/about/aboutt";
 import Nurses from "./Components/nurses/nurses";
 import Practice from "./Components/practice/practice";
 import Privacy from "./Components/privacy";
+import Cookies from "./Components/cookies";
+import Terms from "./Components/terms";
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/nurse" element={<Nurses/>}/>
         <Route path="/practice" element={<Practice/>}/>
         <Route path="/privacy" element={<Privacy/>}/>
+        <Route path="/cookies" element={<Cookies/>}/>
+        <Route path="/terms&conditions" element={<Terms/>}/>
       </Routes>
       </BrowserRouter>
      
